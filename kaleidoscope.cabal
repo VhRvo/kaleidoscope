@@ -54,6 +54,7 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
     default-extensions:
+        OverloadedStrings
         DerivingStrategies
 
 library
@@ -61,11 +62,18 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  MyLib
+    exposed-modules:
+        Repl
 
     -- Modules included in this library but not exported.
     other-modules:
+        Parser
         Parser.Common
+        Parser.Expression
+        Parser.TopLevel
+        Parser.Program
+        Syntax
+        Pretty
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -77,6 +85,10 @@ library
       , megaparsec
       , parser-combinators
       , containers
+      , haskeline
+      , pretty-simple
+      , diagnose ^>= 2.5
+      , unordered-containers
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -84,7 +96,7 @@ library
     -- Base language which the package is written in.
     default-language: GHC2021
 
-executable kaleidoscope
+executable my
     -- Import common warning flags.
     import:           warnings
 

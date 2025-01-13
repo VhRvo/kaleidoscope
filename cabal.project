@@ -1,0 +1,7 @@
+packages:
+  kaleidoscope.cabal
+
+package diagnose
+  flags: +megaparsec-compat
+
+

@@ -1,0 +1,13 @@
+{-# LANGUAGE StrictData #-}
+
+module Location where
+
+import Data.Semigroup
+
+data Location = Location Int Int
+  deriving stock (Eq, Ord, Show)
+  deriving Semigroup via First Location
+
+instance Monoid Location where
+    mempty :: Location
+    mempty = Location 0 0
