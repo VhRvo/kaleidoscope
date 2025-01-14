@@ -1,7 +1,6 @@
 packages:
   kaleidoscope.cabal
+  borrowed/llvm-hs-pure/llvm-hs-pure.cabal
 
 package diagnose
   flags: +megaparsec-compat
-
-

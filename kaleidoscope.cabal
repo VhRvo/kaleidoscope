@@ -74,13 +74,14 @@ library
         Parser.Program
         Syntax
         Pretty
+        CodeGen
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.2.1
+        base
       , text
       , megaparsec
       , parser-combinators
@@ -88,7 +89,8 @@ library
       , haskeline
       , pretty-simple
       , diagnose ^>= 2.5
-      , unordered-containers
+      , llvm-hs-pure
+    --   , unordered-containers
 
     -- Directories containing source files.
     hs-source-dirs:   src
