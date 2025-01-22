@@ -74,7 +74,7 @@ library
         Parser.Program
         Syntax
         Pretty
-        CodeGen
+        -- CodeGen
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -83,6 +83,7 @@ library
     build-depends:
         base
       , text
+      , bytestring
       , megaparsec
       , parser-combinators
       , containers
@@ -90,6 +91,8 @@ library
       , pretty-simple
       , diagnose ^>= 2.5
       , llvm-hs-pure
+      , mtl
+      , bifunctors
     --   , unordered-containers
 
     -- Directories containing source files.
