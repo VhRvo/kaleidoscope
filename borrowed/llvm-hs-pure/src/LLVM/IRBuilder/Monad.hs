@@ -40,6 +40,7 @@ import Data.String
 import GHC.Stack
 import LLVM.AST
 import LLVM.IRBuilder.Internal.SnocList
+import Control.Monad.Fix
 
 -- | This provides a uniform API for creating instructions and inserting them
 -- into a basic block: either at the end of a BasicBlock, or at a specific

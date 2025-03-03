@@ -116,7 +116,7 @@ executable my
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.2.1,
+        base,
         kaleidoscope
 
     -- Directories containing source files.

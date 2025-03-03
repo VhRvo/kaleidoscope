@@ -205,4 +205,3 @@ local = LocalReference double
 
 externFunction :: Name -> Operand
 externFunction = ConstantOperand . C.GlobalReference double
-

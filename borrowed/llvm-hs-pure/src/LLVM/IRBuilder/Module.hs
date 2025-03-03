@@ -49,6 +49,8 @@ import LLVM.AST.Linkage
 import LLVM.AST.Type (ptr)
 import LLVM.IRBuilder.Internal.SnocList
 import LLVM.IRBuilder.Monad
+import Control.Monad.Fix
+import Control.Monad
 
 newtype ModuleBuilderT m a = ModuleBuilderT {unModuleBuilderT :: StateT ModuleBuilderState m a}
   deriving

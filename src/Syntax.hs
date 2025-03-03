@@ -33,6 +33,6 @@ data ExprF r a
   | CallF a r [r]
   deriving stock (Eq, Ord, Show)
 
-deriveBifunctor ''ExprF
-deriveBifoldable ''ExprF
-deriveBitraversable ''ExprF
+-- deriveBifunctor ''ExprF
+-- deriveBifoldable ''ExprF
+-- deriveBitraversable ''ExprF

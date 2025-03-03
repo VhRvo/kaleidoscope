@@ -37,7 +37,7 @@ import Data.ByteString (ByteString)
 import Data.ByteString.Short (ShortByteString)
 import Data.Data (Data, Typeable)
 import Data.Foldable
-import Data.Functor
+import Data.Functor hiding (unzip)
 import Data.Int
 import Data.Maybe (fromMaybe)
 import Data.Semigroup (Semigroup ((<>)))
